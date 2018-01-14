@@ -73,7 +73,8 @@ public class RecursionBasics {
     
     
     
-    //Optimised Version
+    //Optimised Version 
+    // Time complexity of this solution is O(√n)
     // Every Prime Number can be Represented in form of 6k+1 or 6k-1 
     
      public static boolean isPrime(int a) {
