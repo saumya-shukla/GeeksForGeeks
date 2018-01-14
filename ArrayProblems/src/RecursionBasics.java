@@ -70,7 +70,30 @@ public class RecursionBasics {
 
                 return true;
         }
-
+    
+    
+    
+    //Optimised Version
+    // Every Prime Number can be Represented in form of 6k+1 or 6k-1 
+    
+     public static boolean isPrime(int a) {
+         if(a<=1){
+           return false;
+         }else if(a<=3){
+           return true;
+         }else if(a%2==0 || a%3==0){
+           return false;
+         }
+         for(int x = 5 ; x<= math.sqrt(a) ;x=x+6){
+                if(a % x == 0  || a % (x+2)==0){
+                   return false;
+                }
+          }   
+            return true;
+     }
+    
+    
+    
 
         public static int sumDigits(int n){
 
