@@ -1,0 +1,36 @@
+Sieve of Eratosthenes
+
+
+#include <bits/stdc++.h>
+#define MAX 1000000
+using namespace std;
+ 
+int a[MAX];
+void SieveOfEratosthenes(int n)
+{
+   memset(a,a+MAX,0) // this function intializing all the elements of an array to 0 
+   for(int i=2 ; i<sqrt(MAX) ; i++){
+      if(a[i]==0){
+        for(int j = 2*i;j<=MAX;j=j+i){
+          a[j]=1;
+        }   
+      }
+   
+   }
+}
+
+
+
+
+int main()
+{
+    int n = 30; // check for Prime Number
+    SieveOfEratosthenes(n)
+    // Now you have an array u can check for all prime number in o(1)
+    if(a[n]==0){
+     cout<<"Prime"<<endl;
+    }else{
+     cout<<"Not A Prime Number"<<endl;
+    }
+    
+}
